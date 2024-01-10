@@ -193,7 +193,7 @@ export default {
   methods: {
     async req_raised() {
       await axios
-        .get("https://redb-backend.onrender.com/get/blood/request")
+        .get("http://localhost:4000/get/blood/request")
         .then((result) => {
           let alldata = result.data;
           console.log(alldata);

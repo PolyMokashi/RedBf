@@ -127,7 +127,7 @@
     methods: {
       async getstatus(){
         await axios
-    .get("https://redb-backend.onrender.com/get/status").then((result)=>{
+    .get("http://localhost:4000/get/status").then((result)=>{
 
 let alldata = result.data;
 console.log(alldata)

@@ -369,7 +369,7 @@ export default {
 
     async donorData() {
       await axios
-        .get("https://redb-backend.onrender.com/get/donors")
+        .get("http://localhost:4000/get/donors")
         .then((result) => {
           let alldata = result.data;
           console.log(alldata);
@@ -387,7 +387,7 @@ export default {
 
     async deleteItem(item) {
       await axios
-        .delete(`https://redb-backend.onrender.com/delete/donors/${item._id}`)
+        .delete(`http://localhost:4000/delete/donors/${item._id}`)
         .then((data) => {
           console.log(data);
         })
@@ -413,7 +413,7 @@ export default {
     },
     async save() {
       await axios
-        .post("https://redb-backend.onrender.com/add/new/donors", {
+        .post("http://localhost:4000/add/new/donors", {
           name: this.editedItem.name,
           addr: this.editedItem.addr,
           mob: this.editedItem.mob,

@@ -285,7 +285,7 @@
     },
     methods: {
       async bloodBankData(){
-   await axios.get("https://redb-backend.onrender.com/get/bloodbank").then((result)=>{
+   await axios.get("http://localhost:4000/get/bloodbank").then((result)=>{
 console.log(result)
 let alldata = result.data;
 console.log(alldata)
@@ -311,7 +311,7 @@ this.list=alldata;
       async deleteItem(item) {
         console.log(item._id)
         await axios
-    .delete(`https://redb-backend.onrender.com/delete/blood/details/${item._id}`).then((data)=>{
+    .delete(`http://localhost:4000/delete/blood/details/${item._id}`).then((data)=>{
 console.log(data)
     }).catch((err)=>{
     console.log(err)
@@ -334,7 +334,7 @@ console.log(data)
         this.editItem(addObj);
       },
       async save() {
-        await axios.post("https://redb-backend.onrender.com/add/new/blood/collection",
+        await axios.post("http://localhost:4000/add/new/blood/collection",
     {
       coldate:this.editedItem.coldate,
     expdate: this.editedItem.expdate,
