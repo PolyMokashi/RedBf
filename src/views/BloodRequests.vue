@@ -272,7 +272,7 @@ export default {
 
     async bloodBankRequest(){
    await axios
-    .get("http://localhost:4000/get/blood/request").then((result)=>{
+    .get("https://redgfserver.onrender.com/get/blood/request").then((result)=>{
 
 let alldata = result.data;
 console.log(alldata)
@@ -288,7 +288,7 @@ console.log(this.list);
       item.accepted = true;
       item.rejected = true;
       await axios
-        .post("http://localhost:4000/post/status", {
+        .post("https://redgfserver.onrender.com/post/status", {
           _id:item._id,
           name:item.name,
           stat:"accepted"
@@ -306,7 +306,7 @@ console.log(this.list);
       item.rejected = true;
       item.accepted = false;
       await axios
-        .post("http://localhost:4000/post/status", {
+        .post("https://redgfserver.onrender.com/post/status", {
           _id:item._id,
           name:item.name,
           stat:"rejected"
@@ -323,7 +323,7 @@ console.log(this.list);
     async Deleteitem(item) {
 console.log(item._id);
    await axios
-    .delete(`http://localhost:4000/delete/request/${item._id}`).then((data)=>{
+    .delete(`https://redgfserver.onrender.com/delete/request/${item._id}`).then((data)=>{
 console.log(data)
     }).catch((err)=>{
     console.log(err)
