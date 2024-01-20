@@ -190,7 +190,7 @@
     methods:{
       async bloodBankRequest(){
    await axios
-    .get("http://localhost:4000/get/blood/request").then((result)=>{
+    .get("https://redgfserver.onrender.com/get/blood/request").then((result)=>{
 
 let alldata = result.data;
 console.log(alldata)
@@ -210,7 +210,7 @@ console.log(this.count);
 
       async donors(){
    await axios
-    .get("http://localhost:4000/get/donors").then((result)=>{
+    .get("https://redgfserver.onrender.com/get/donors").then((result)=>{
 
 let alldata = result.data;
 console.log(alldata)

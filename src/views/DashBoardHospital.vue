@@ -193,7 +193,7 @@ export default {
   methods: {
     async req_raised() {
       await axios
-        .get("http://localhost:4000/get/blood/request")
+        .get("https://redgfserver.onrender.com/get/blood/request")
         .then((result) => {
           let alldata = result.data;
           console.log(alldata);
