@@ -294,7 +294,7 @@ export default {
       };
 
       await axios
-        .post("https://redgfserver.onrender.com/post/new/request", {
+        .post("http://localhost:4000/post/new/request", {
           name: this.firstName + " " + this.lastName,
           bloodgrp: this.bloodgrp,
           hospital: this.hospital,
