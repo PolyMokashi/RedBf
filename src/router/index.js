@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import LoginHospital from '../views/LoginHospital.vue'
 import LoginBlood from '../views/LoginBlood.vue'
 import BloodAbout from '../views/BloodAbout.vue'
-import RegisterView from '../views/RegisterView'
 import DashBoardHospital from '../views/DashBoardHospital'
 import DashBoardBlood from '../views/DashBoardBlood'
 import RegisterHospital from '../views/RegisterHospital'
@@ -34,12 +33,6 @@ const routes = [
     path: '/BloodAbout',
     name: 'blood_about',
     component: BloodAbout
-  },
-  {
-    path: '/register',
-    name: 'register',
-    component: RegisterView
-
   },
   {
     path: '/BloodBank',
