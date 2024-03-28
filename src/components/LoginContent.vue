@@ -35,7 +35,7 @@
         color="black"
         :disabled="invalid"
       >
-        submit
+        Log in
       </v-btn>
       <v-btn @click="clear"> clear </v-btn>
     </form>
@@ -45,7 +45,7 @@
 
 <script>
 // import axios from 'axios';
-import { required, digits, email, max, regex } from "vee-validate/dist/rules";
+import { required, max, regex } from "vee-validate/dist/rules";
 import {
   extend,
   ValidationObserver,
@@ -54,11 +54,6 @@ import {
 } from "vee-validate";
 
 setInteractionMode("eager");
-
-extend("digits", {
-  ...digits,
-  message: "{_field_} needs to be {length} digits. ({_value_})",
-});
 
 extend("required", {
   ...required,
@@ -73,11 +68,6 @@ extend("max", {
 extend("regex", {
   ...regex,
   message: "{_field_} {_value_} does not match {regex}",
-});
-
-extend("email", {
-  ...email,
-  message: "Email must be valid",
 });
 
 export default {
@@ -122,9 +112,6 @@ export default {
       } catch (error) {
         console.error('An error occurred while logging in.', error);
       }
-      // if (this.username=="apex"||this.password=="apex@1234"){
-      //   this.$router.push({ path: "/Hospital" });
-      // }
     },
     clear() {
       this.username="";
