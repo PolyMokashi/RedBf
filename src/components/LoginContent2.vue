@@ -41,9 +41,8 @@
           type="submit"
           color="black"
           dark
-          :disabled="invalid"
         >
-          submit
+          Log in
         </v-btn>
         <v-btn @click="clear">
           clear
@@ -53,15 +52,10 @@
   </template>
 
   <script>
-  import { required, digits, email, max, regex } from 'vee-validate/dist/rules'
+  import { required, max, regex } from 'vee-validate/dist/rules'
   import { extend, ValidationObserver, ValidationProvider, setInteractionMode } from 'vee-validate'
 
   setInteractionMode('eager')
-
-  extend('digits', {
-    ...digits,
-    message: '{_field_} needs to be {length} digits. ({_value_})',
-  })
 
   extend('required', {
     ...required,
@@ -78,10 +72,6 @@
     message: '{_field_} {_value_} does not match {regex}',
   })
 
-  extend('email', {
-    ...email,
-    message: 'Email must be valid',
-  })
 
   export default {
     components: {
