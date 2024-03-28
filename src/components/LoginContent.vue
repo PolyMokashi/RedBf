@@ -45,7 +45,7 @@
 
 <script>
 // import axios from 'axios';
-import { required, max, regex } from "vee-validate/dist/rules";
+import { required,digits, email, max, regex } from "vee-validate/dist/rules";
 import {
   extend,
   ValidationObserver,
