@@ -1,4 +1,4 @@
-# project-aoe
+# project-RedB
 
 ## Project setup
 ```
