@@ -59,7 +59,14 @@ extend("required", {
   ...required,
   message: "{_field_} can not be empty",
 });
-
+extend("email", {
+    ...email,
+    message: "Email must be valid",
+  });
+  extend("digits", {
+    ...digits,
+    message: "{_field_} needs to be {length} digits. ({_value_})",
+  });
 extend("max", {
   ...max,
   message: "{_field_} may not be greater than {length} characters",
