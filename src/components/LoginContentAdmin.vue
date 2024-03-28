@@ -38,7 +38,7 @@
           color="black"
           :disabled="invalid"
         >
-          submit
+          Log in
         </v-btn>
         <v-btn @click="clear"> clear </v-btn>
     </v-col>
