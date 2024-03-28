@@ -1,7 +1,6 @@
 <template>
     <validation-observer
       ref="observer"
-      v-slot="{ invalid }"
     >
       <form @submit.prevent="submit">
         <validation-provider
@@ -52,7 +51,7 @@
   </template>
 
   <script>
-  import { required,digits, email, max, regex } from 'vee-validate/dist/rules'
+  import { required, max, regex } from 'vee-validate/dist/rules'
   import { extend, ValidationObserver, ValidationProvider, setInteractionMode } from 'vee-validate'
 
   setInteractionMode('eager')

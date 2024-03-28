@@ -1,5 +1,5 @@
 <template>
-  <validation-observer ref="observer" v-slot="{ invalid }">
+  <validation-observer ref="observer">
     <form @submit.prevent="submit">
       <validation-provider v-slot="{ errors }" name="Name" rules="required">
         <v-text-field
@@ -33,7 +33,6 @@
         type="submit"
         dark
         color="black"
-        :disabled="invalid"
       >
         Log in
       </v-btn>
@@ -45,7 +44,7 @@
 
 <script>
 // import axios from 'axios';
-import { required,digits, email, max, regex } from "vee-validate/dist/rules";
+import { required, max, regex } from "vee-validate/dist/rules";
 import {
   extend,
   ValidationObserver,
@@ -59,14 +58,6 @@ extend("required", {
   ...required,
   message: "{_field_} can not be empty",
 });
-extend("email", {
-    ...email,
-    message: "Email must be valid",
-  });
-  extend("digits", {
-    ...digits,
-    message: "{_field_} needs to be {length} digits. ({_value_})",
-  });
 extend("max", {
   ...max,
   message: "{_field_} may not be greater than {length} characters",
