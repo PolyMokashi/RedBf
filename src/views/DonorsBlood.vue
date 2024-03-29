@@ -180,7 +180,7 @@
         <v-snackbar v-model="backend_error" :timeout="timeout" color="red">
           {{ errorcapture }}
         </v-snackbar>
-        <v-snackbar v-model="check_res" :timeout="timeout" color="gray">
+        <v-snackbar v-model="check_res" :timeout="timeout" dark>
          <strong>{{ res_message }}</strong> 
         </v-snackbar>
       </v-main>
@@ -330,8 +330,6 @@ export default {
         .delete(`https://redgfserver.onrender.com/delete/donors/${item._id}`)
         .then((data) => {
           console.log(data);
-          this.check_res = true;
-          this.res_message = data.name;
         })
         .catch((err) => {
           this.backend_error = true;
