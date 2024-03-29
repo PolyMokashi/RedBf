@@ -383,7 +383,6 @@ export default {
           
         })
         .finally(() => {
-          location.reload();
           this.loader = false;
         });
       this.close();
