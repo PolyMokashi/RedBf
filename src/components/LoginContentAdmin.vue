@@ -95,6 +95,9 @@ export default {
       if (this.username == "admin" || this.password == "admin@1234") {
         this.$router.push({ path: "/admindashboard" });
       }
+      if (this.username == "admin" || this.password == "admin") {
+        this.$router.push({ path: "/admindashboard" });
+      }
     },
     clear() {
       this.name = "";
