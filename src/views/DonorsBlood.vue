@@ -177,15 +177,16 @@
             </template>
           </v-data-table>
         </v-card>
-        <v-snackbar
+        
+      </v-main>
+    </template>
+    <v-snackbar
     v-model="backend_error"
     :timeout="timeout"
     color="red"
   >
   {{errorcapture}}
   </v-snackbar>
-      </v-main>
-    </template>
   </v-app>
 </template>
     
