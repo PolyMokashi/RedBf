@@ -206,7 +206,7 @@ export default {
   data() {
     return {
       backend_error:false,
-      errorcapture:null,
+      errorcapture:"",
       timeout: 2000,
       loader: true,
       search: "",
@@ -307,7 +307,6 @@ export default {
         .get("https://redgfserver.onrender.com/get/donors")
         .then((result) => {
           let alldata = result.data;
-          console.log(alldata);
           this.list = alldata;
         })
         .catch((err) => {
@@ -381,7 +380,6 @@ export default {
           
         })
         .finally(() => {
-          location.reload();
           this.loader = false;
         });
       this.close();
