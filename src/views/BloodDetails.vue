@@ -217,9 +217,7 @@ export default {
       await axios
         .get("https://redgfserver.onrender.com/get/bloodbank")
         .then((result) => {
-          console.log(result);
           let alldata = result.data;
-          console.log(alldata);
           this.list = alldata;
         })
         .catch((err) => {

@@ -364,6 +364,7 @@ export default {
           console.log(err);
         })
         .finally(() => {
+          location.reload();
           this.loader = false;
         });
       this.close();
