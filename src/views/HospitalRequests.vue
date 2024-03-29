@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <template v-if="loader">
+    <!-- <template v-if="loader">
       <LoadingScreen :isLoading="loader" />
-    </template>
+    </template> -->
     <template>
       <HospitalNavBar />
       <v-main>
@@ -26,7 +26,7 @@
           </h2></v-card-title
         >
         <v-container fluid>
-          <validation-observer ref="observer" v-slot="{ invalid }">
+          <validation-observer ref="observer">
             <v-form @submit.prevent="submit">
               <v-row>
                 <v-col cols="12" sm="6" md="6">
@@ -131,7 +131,6 @@
               <v-col cols="6" sm="2" md="2">
                   <v-btn
                     type="submit"
-                    :disabled="invalid"
                     style="background: #112D4E;"
                     x-large
                     dark
@@ -147,6 +146,9 @@
             </v-row>
             </v-form>
           </validation-observer>
+          <v-snackbar v-model="check_res" :timeout="timeout" dark>
+         <strong>{{ res_message }}</strong> 
+        </v-snackbar>
         </v-container>
       </v-card>
     </v-main>
@@ -172,17 +174,19 @@ extend("required", {
 
 import axios from "axios";
 import HospitalNavBar from '@/components/navbar/HospitalNavBar.vue';
-import LoadingScreen from "@/components/LoadingScreen.vue";
+// import LoadingScreen from "@/components/LoadingScreen.vue";
 export default {
   components: {
     HospitalNavBar,
-    LoadingScreen,
+    // LoadingScreen,
     ValidationProvider,
     ValidationObserver,
   },
   data() {
     return {
-      loader:false,
+      // loader:false,
+      res_message: "",
+      check_res: false,
       firstName: "",
       // loading:false,
       lastName: "",
@@ -221,13 +225,15 @@ export default {
         })
         .then((result) => {
           console.log(result);
+          this.check_res = true;
+          this.res_message = result.data.name;
         })
         .catch((err) => {
           console.log(err);
         })
-        .finally(() => {
-          this.loader = true;
-        });
+        // .finally(() => {
+        //   this.loader = true;
+        // });
         this.arr.push(ans);
         location.reload();
     },
