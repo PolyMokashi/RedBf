@@ -375,7 +375,7 @@ export default {
         })
         .catch((err) => {
           this.backend_error=true;
-          this.errorcapture=err;
+          this.errorcapture=err.name;
           console.log(err);
           
         })
