@@ -178,12 +178,11 @@
           </v-data-table>
         </v-card>
         <v-snackbar
-        v-if="backend_error"
-    v-model="snackbar"
+    v-model="backend_error"
     :timeout="timeout"
     color="red"
   >
-  {{this.errorcapture}}
+  {{errorcapture}}
   </v-snackbar>
       </v-main>
     </template>
