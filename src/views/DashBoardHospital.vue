@@ -16,7 +16,7 @@
         </div>
 
         <v-container fill-height>
-          <v-layout align-center justify-center class="pt-16">
+          <v-layout align-center justify-center class="pt-16, margin-top-0">
             <v-col
               justify="center"
               v-for="card in cards"
@@ -27,7 +27,7 @@
                 <v-card
                   style="text-align: center; font-size: 40px"
                   elevation-9
-                  height="590"
+                  height="540"
                   class="cardmy"
                   :color="card.color"
                   :elevation="hover ? 16 : 2"

@@ -21,7 +21,7 @@
         outlined
       >
         <v-card-title
-          ><h2 style="font-family: Josefin Sans">
+          ><h2>
             Blood Requests
           </h2></v-card-title
         >

@@ -21,14 +21,14 @@
             max-width="1100"
             outlined
           >
-            <v-simple-table fixed-header height="300px">
-              <template v-slot:default>
+            <v-simple-table fixed-header height="450px">
+              <template v-slot:default >
                 <thead>
                   <tr>
-                    <th class="text-left">
+                    <th class="text-left ba" style="background-color: white;">
                       <h1>Name</h1>
                     </th>
-                    <th class="text-left">
+                    <th class="text-left" style="background-color: white;">
                       <h1>Status</h1>
                     </th>
                   </tr>
