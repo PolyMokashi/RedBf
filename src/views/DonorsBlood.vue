@@ -333,6 +333,8 @@ export default {
           console.log(data);
         })
         .catch((err) => {
+          this.backend_error=true;
+          this.errorcapture=err;
           console.log(err);
         })
         .finally(() => {
@@ -374,6 +376,8 @@ export default {
           console.log(result);
         })
         .catch((err) => {
+          this.backend_error=true;
+          this.errorcapture=err;
           console.log(err);
           
         })
