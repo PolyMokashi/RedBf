@@ -132,6 +132,9 @@
             </template>
           </v-data-table>
         </v-card>
+        <v-snackbar v-model="check_res" :timeout="timeout" dark>
+         <strong>{{ res_message }}</strong> 
+        </v-snackbar>
       </v-main>
     </template>
   </v-app>
@@ -152,6 +155,8 @@ export default {
   },
   data() {
     return {
+      res_message: "",
+      check_res: false,
       loader: true,
       search: "",
       headers: [
@@ -281,6 +286,8 @@ export default {
         })
         .then((result) => {
           console.log(result);
+          this.check_res = true;
+          this.res_message = result.data.name;
         })
         .catch((err) => {
           console.log(err);
