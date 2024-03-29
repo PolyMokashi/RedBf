@@ -177,16 +177,16 @@
             </template>
           </v-data-table>
         </v-card>
-        
-      </v-main>
-    </template>
-    <v-snackbar
-    v-model="backend_error"
+        <v-snackbar
+        v-if="backend_error"
+    v-model="snackbar"
     :timeout="timeout"
     color="red"
   >
   {{errorcapture}}
   </v-snackbar>
+      </v-main>
+    </template>
   </v-app>
 </template>
     
@@ -207,7 +207,7 @@ export default {
   data() {
     return {
       backend_error:false,
-      errorcapture:"",
+      errorcapture:null,
       timeout: 2000,
       loader: true,
       search: "",
@@ -308,6 +308,7 @@ export default {
         .get("https://redgfserver.onrender.com/get/donors")
         .then((result) => {
           let alldata = result.data;
+          console.log(alldata);
           this.list = alldata;
         })
         .catch((err) => {
@@ -373,14 +374,16 @@ export default {
         })
         .then((result) => {
           console.log(result);
+          console.log(result.data.message);
         })
         .catch((err) => {
           this.backend_error=true;
-          this.errorcapture=err.name;
+          this.errorcapture=err;
           console.log(err);
           
         })
         .finally(() => {
+          location.reload();
           this.loader = false;
         });
       this.close();
