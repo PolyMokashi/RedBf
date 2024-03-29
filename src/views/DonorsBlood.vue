@@ -181,7 +181,7 @@
           {{ errorcapture }}
         </v-snackbar>
         <v-snackbar v-model="check_res" :timeout="timeout" dark>
-         <span style="text-align: center;">{{ res_message }}</span> 
+         <strong style="text-align: center;">{{ res_message }}</strong> 
         </v-snackbar>
       </v-main>
     </template>
