@@ -177,6 +177,14 @@
             </template>
           </v-data-table>
         </v-card>
+        <v-snackbar
+        v-if="backend_error"
+    v-model="snackbar"
+    :timeout="timeout"
+    color="red"
+  >
+  {{this.errorcapture}}
+  </v-snackbar>
       </v-main>
     </template>
   </v-app>
@@ -198,6 +206,9 @@ export default {
   },
   data() {
     return {
+      backend_error:false,
+      errorcapture:null,
+      timeout: 2000,
       loader: true,
       search: "",
       headers: [
@@ -301,6 +312,8 @@ export default {
           this.list = alldata;
         })
         .catch((err) => {
+          this.backend_error=true;
+          this.errorcapture=err;
           console.log(err);
         })
         .finally(() => {
@@ -362,6 +375,7 @@ export default {
         })
         .catch((err) => {
           console.log(err);
+          
         })
         .finally(() => {
           location.reload();
