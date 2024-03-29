@@ -180,8 +180,8 @@
         <v-snackbar v-model="backend_error" :timeout="timeout" color="red">
           {{ errorcapture }}
         </v-snackbar>
-        <v-snackbar v-model="check_res" :timeout="timeout" dark>
-         <strong style="text-align: center;">{{ res_message }}</strong> 
+        <v-snackbar v-model="check_res" :timeout="timeout" color="gray">
+         <strong>{{ res_message }}</strong> 
         </v-snackbar>
       </v-main>
     </template>
