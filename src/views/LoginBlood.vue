@@ -23,21 +23,8 @@
                 <v-col>
                   <v-card-text>
                     <v-row>
-                      <!-- <v-col class="pr-mr-0"> -->
-                        <!-- <v-avatar size="130">
-                          <img
-                            src="https://i.ibb.co/LdPZt21/Picture2.png"
-                            alt="RedB"
-                          />
-                        </v-avatar> -->
-                      <!-- </v-col> -->
-                      
                       <v-col >
                         <v-card-title><h1><span style="color:red">R</span>ed<span style="color:red">B</span></h1></v-card-title>
-                        <!-- <v-card-title
-                          >Intelligent Blood Management System for Hospitals and
-                          Blood Banks</v-card-title
-                        > -->
                       </v-col>
                     </v-row>
                     <LoginContent2 />
@@ -128,8 +115,6 @@ export default {
 .curved {
   border-bottom-right-radius: 400px !important;
 }
-
-
 
 .my-card {
   width: 100%;

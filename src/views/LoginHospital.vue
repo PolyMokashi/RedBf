@@ -1,4 +1,4 @@
-<template  >
+<template>
   <v-app>
     <v-container class="fill-height d-flex justify-space-between align-center" >
       <div class="bg">
@@ -28,11 +28,6 @@
 
                       </v-col>
                     </v-row>
-
-                    <!-- <v-card-title
-                      >Intelligent Blood Management System for Hospitals and
-                      Blood Banks</v-card-title
-                    > -->
                     <LoginContent />
                   </v-card-text>
                   <div>
@@ -112,9 +107,7 @@ export default {
         },
       ],
     };
-    
   },
-  
 };
 </script>
 

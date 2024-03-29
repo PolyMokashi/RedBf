@@ -35,10 +35,18 @@
         color="black"
       >
         Log in
-      </v-btn>
+      </v-btn> 
       <v-btn @click="clear"> clear </v-btn>
     </form>
+    <v-snackbar
+    v-model="snackbar"
+    :timeout="timeout"
+    color="red"
+  >
+    {{ this.text }}
+  </v-snackbar>
   </validation-observer>
+  
 </template>
 
 
@@ -76,6 +84,9 @@ export default {
   data: () => ({
     username: "",
     password:"",
+    snackbar: false,
+    text: "Please enter valid Username and Password",
+    timeout: 2000,
   }),
 
   methods: {
@@ -101,9 +112,9 @@ export default {
           localStorage.setItem('token', data.token);
 
           // Redirect to the home page or perform other actions
-          // ...
           this.$router.push({ path: "/Hospital" });
         } else {
+          this.snackbar=true
           console.error(data.error);
         }
       }

@@ -3,10 +3,9 @@ import VueRouter from 'vue-router'
 import LoginHospital from '../views/LoginHospital.vue'
 import LoginBlood from '../views/LoginBlood.vue'
 import BloodAbout from '../views/BloodAbout.vue'
+import HospitalAbout from '../views/HospitalAbout.vue'
 import DashBoardHospital from '../views/DashBoardHospital'
 import DashBoardBlood from '../views/DashBoardBlood'
-import RegisterHospital from '../views/RegisterHospital'
-import RegisterBlood from '../views/RegisterBlood'
 import DonorsBlood from '../views/DonorsBlood'
 import BloodDetails from '../views/BloodDetails'
 import BloodRequests from '../views/BloodRequests'
@@ -35,19 +34,14 @@ const routes = [
     component: BloodAbout
   },
   {
+    path: '/HospitalAbout',
+    name: 'hospital_about',
+    component: HospitalAbout
+  },
+  {
     path: '/BloodBank',
     name: 'blood_bank_dashboard',
     component: DashBoardBlood
-  },
-  {
-    path: '/RegisterHospital',
-    name: 'hospital_register',
-    component: RegisterHospital
-  },
-  {
-    path: '/RegisterBlood',
-    name: 'blood_register',
-    component: RegisterBlood
   },
   {
     path: '/Hospital',
