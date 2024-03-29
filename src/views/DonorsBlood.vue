@@ -177,14 +177,12 @@
             </template>
           </v-data-table>
         </v-card>
-        <v-snackbar
-        v-if="backend_error"
-    v-model="snackbar"
-    :timeout="timeout"
-    color="red"
-  >
-  {{errorcapture}}
-  </v-snackbar>
+        <v-snackbar v-model="backend_error" :timeout="timeout" color="red">
+          {{ errorcapture }}
+        </v-snackbar>
+        <v-snackbar v-model="check_res" :timeout="timeout" dark>
+          {{ res_message }}
+        </v-snackbar>
       </v-main>
     </template>
   </v-app>
@@ -206,8 +204,10 @@ export default {
   },
   data() {
     return {
-      backend_error:false,
-      errorcapture:null,
+      res_message: "",
+      check_res: false,
+      backend_error: false,
+      errorcapture: null,
       timeout: 2000,
       loader: true,
       search: "",
@@ -308,12 +308,11 @@ export default {
         .get("https://redgfserver.onrender.com/get/donors")
         .then((result) => {
           let alldata = result.data;
-          console.log(alldata);
           this.list = alldata;
         })
         .catch((err) => {
-          this.backend_error=true;
-          this.errorcapture=err;
+          this.backend_error = true;
+          this.errorcapture = err;
           console.log(err);
         })
         .finally(() => {
@@ -331,34 +330,36 @@ export default {
         .delete(`https://redgfserver.onrender.com/delete/donors/${item._id}`)
         .then((data) => {
           console.log(data);
+          this.check_res = true;
+          this.res_message = data.name;
         })
         .catch((err) => {
-          this.backend_error=true;
-          this.errorcapture=err;
+          this.backend_error = true;
+          this.errorcapture = err;
           console.log(err);
         })
         .finally(() => {
           this.loader = false;
         });
-      const index = this.list.indexOf(item);
-      confirm("Are you sure you want to delete this item?") &&
+        const index = this.list.indexOf(item);
+        confirm("Are you sure you want to delete this item?") &&
         this.list.splice(index, 1);
-    },
-
-    close() {
-      setTimeout(() => {
-        this.editedItem = Object.assign({}, this.defaultItem);
-        this.editedIndex = -1;
-      }, 300);
-    },
-    addNew() {
-      const addObj = Object.assign({}, this.defaultItem);
-      addObj.id = this.list.length + 1;
-      this.list.unshift(addObj);
-      this.editItem(addObj);
-    },
-    async save() {
-      await axios
+      },
+      
+      close() {
+        setTimeout(() => {
+          this.editedItem = Object.assign({}, this.defaultItem);
+          this.editedIndex = -1;
+        }, 300);
+      },
+      addNew() {
+        const addObj = Object.assign({}, this.defaultItem);
+        addObj.id = this.list.length + 1;
+        this.list.unshift(addObj);
+        this.editItem(addObj);
+      },
+      async save() {
+        await axios
         .post("https://redgfserver.onrender.com/add/new/donors", {
           name: this.editedItem.name,
           addr: this.editedItem.addr,
@@ -374,13 +375,13 @@ export default {
         })
         .then((result) => {
           console.log(result);
-          console.log(result.data.message);
+          this.check_res = true;
+          this.res_message = result.data.name;
         })
         .catch((err) => {
-          this.backend_error=true;
-          this.errorcapture=err;
+          this.backend_error = true;
+          this.errorcapture = err;
           console.log(err);
-          
         })
         .finally(() => {
           this.loader = false;
