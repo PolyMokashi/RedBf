@@ -15,7 +15,25 @@
         class="white--text text-center"
       >
         <v-card-title style="justify-content: center">
-          <h3>Team Defaulter</h3>
+          <h4>
+            Contact Me: 
+            <v-btn icon href="mailto:pradeepmokashi12@gmail.com" md>
+                <v-icon>mdi-email</v-icon>
+              </v-btn>
+            <v-btn icon href="https://www.linkedin.com/in/pradeep-mokashi-b962b9208/" md>
+                <v-icon>mdi-linkedin</v-icon>
+              </v-btn>
+              <v-btn icon href="https://github.com/PolyMokashi" md>
+                <v-icon>mdi-github</v-icon>
+              </v-btn>
+              
+              <v-btn icon href="https://twitter.com/Poly_Mokashi12" md>
+                <v-icon>mdi-twitter</v-icon>
+              </v-btn>
+              <v-btn icon href="https://www.instagram.com/poly_mokashi/" md>
+                <v-icon>mdi-instagram</v-icon>
+              </v-btn>
+            </h4>
         </v-card-title>
         <v-divider></v-divider>
         <div>
