@@ -243,14 +243,10 @@ export default {
     },
 
     async deleteItem(item) {
-      console.log(item._id);
       await axios
         .delete(
           `https://redgfserver.onrender.com/delete/blood/details/${item._id}`
         )
-        .then((data) => {
-          console.log(data);
-        })
         .catch((err) => {
           console.log(err);
         })

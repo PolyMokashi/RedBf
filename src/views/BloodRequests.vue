@@ -121,7 +121,6 @@ export default {
   data() {
     return {
       loader: true,
-      acceptedItems: [],
       snackbar: false,
       snackbar2: false,
       snackbar3: false,
@@ -209,9 +208,6 @@ export default {
           name: item.name,
           stat: "accepted",
         })
-        .then((result) => {
-          console.log(result);
-        })
         .catch((err) => {
           console.log(err);
         })
@@ -229,9 +225,6 @@ export default {
           name: item.name,
           stat: "rejected",
         })
-        .then((result) => {
-          console.log(result);
-        })
         .catch((err) => {
           console.log(err);
         })
@@ -244,9 +237,6 @@ export default {
       console.log(item._id);
       await axios
         .delete(`https://redgfserver.onrender.com/delete/request/${item._id}`)
-        .then((data) => {
-          console.log(data);
-        })
         .catch((err) => {
           console.log(err);
         })

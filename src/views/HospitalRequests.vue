@@ -261,8 +261,6 @@ export default {
   font-family: "Josefin Sans", sans-serif;
 }
 #app {
-  /*background: url(https://images.unsplash.com/photo-1551970634-747846a548cb?ixlib)
-            center/cover no-repeat;*/
   background-color: #f9f7f7;
   background: radial-gradient(ellipse at bottom, #dbe2ef, #393e46);
   overflow: hidden;

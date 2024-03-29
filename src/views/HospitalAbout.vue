@@ -66,40 +66,8 @@ export default {
   },
   data() {
     return {
-      profileImage: "",
       aboutTitle: "",
       aboutContent: "",
-      fill: false,
-      type: "trend",
-      autoLineWidth: false,
-      interval: {},
-      value2: 0,
-      cards: [
-        {
-          title: "Blood Requests",
-          value: "120",
-          flex: 4,
-          color: "red",
-          color2: "#367E18",
-          rotate: "275",
-        },
-        {
-          title: "Donated Blood",
-          value: "150L",
-          flex: 4,
-          color: "#00008b",
-          color2: "#A020F0",
-          rotate: "190",
-        },
-        {
-          title: "No. of Donors",
-          value: "94",
-          flex: 4,
-          color: "#A020F0",
-          color2: "#03001C",
-          rotate: "170",
-        },
-      ],
     };
   },
 
@@ -120,7 +88,7 @@ export default {
 
         this.aboutContent3 =
           "The impact of RedB on Indian society is significant as it helps to improve the efficiency and accuracy of blood bank operations, resulting in improved patient outcomes. RedB ensures that hospitals have access to the required blood products when needed, reduces wastage, and ensures proper storage and transportation of blood. By facilitating the process of blood product requests and transfusions, RedB plays a critical role in saving lives and improving the overall healthcare system in India.";
-      }, 2000);
+      }, 500);
     },
   },
   mounted() {

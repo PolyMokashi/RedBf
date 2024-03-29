@@ -328,9 +328,6 @@ export default {
     async deleteItem(item) {
       await axios
         .delete(`https://redgfserver.onrender.com/delete/donors/${item._id}`)
-        .then((data) => {
-          console.log(data);
-        })
         .catch((err) => {
           this.backend_error = true;
           this.errorcapture = err;

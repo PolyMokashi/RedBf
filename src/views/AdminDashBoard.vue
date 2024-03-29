@@ -70,7 +70,6 @@ export default {
     return {
       loader: true,
       count: 0,
-      bagcount: 0,
       data: [],
       donorcount: 0,
       width: 5,
@@ -82,8 +81,6 @@ export default {
       value: [0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 5, 9, 11],
       gradientDirection: "top",
       fill: false,
-      req_count: [],
-      donor_count: [],
       type: "trend",
       autoLineWidth: false,
       interval: {},
