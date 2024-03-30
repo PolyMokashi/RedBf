@@ -7,7 +7,6 @@ import VueGtm from "@gtm-support/vue2-gtm";
 Vue.config.productionTip = false
 Vue.use(VueGtm, {
   id: "GTM-P9CNT9G6",
-  debug: true, // Whether or not display console logs debugs (optional)
 });
 
 new Vue({
