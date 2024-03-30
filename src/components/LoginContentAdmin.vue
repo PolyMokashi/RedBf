@@ -93,9 +93,15 @@ export default {
     submit() {
       this.$refs.observer.validate();
       if (this.username == "admin" || this.password == "admin@1234") {
+        window.dataLayer?.push({
+            event: "Admin-Log_in"
+            });
         this.$router.push({ path: "/admindashboard" });
       }
       if (this.username == "admin" || this.password == "admin") {
+        window.dataLayer?.push({
+            event: "Admin-Log_in"
+            });
         this.$router.push({ path: "/admindashboard" });
       }
     },

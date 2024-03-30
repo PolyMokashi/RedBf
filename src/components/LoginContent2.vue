@@ -95,6 +95,9 @@ export default {
           const data = await response.json();
 
           if (response.ok) {
+            window.dataLayer?.push({
+            event: "BloodBank-Log_in"
+            });
             // Store the token in local storage
             localStorage.setItem("token", data.token);
 
