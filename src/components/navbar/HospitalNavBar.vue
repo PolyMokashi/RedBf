@@ -3,7 +3,7 @@
     <v-container class="fill-height d-flex justify-space-between align-center">
       <div class="logo">
         <router-link to="/Hospital" target="_blank_"
-          ><img width="150" src="https://i.ibb.co/LdPZt21/Picture2.png" alt=""
+          ><img width="120" src="https://i.ibb.co/LdPZt21/Picture2.png" alt=""
         /></router-link>
       </div>
       <div class="links">
