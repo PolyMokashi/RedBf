@@ -79,6 +79,8 @@
           </v-row>
         </v-card>
       </v-layout>
+<h3>Username- admin</h3>
+<h3>Password- admin</h3>
     </v-container>
   </v-app>
 </template>
