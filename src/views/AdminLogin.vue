@@ -15,7 +15,7 @@
           class="elevation-9"
           color="grey lighten-0"
           width="700"
-          height="650"
+          height="620"
         >
           <v-toolbar dark color="black">
             <v-toolbar-title> RedB Admin Login </v-toolbar-title>
