@@ -14,7 +14,7 @@
         <v-card
           class="elevation-9"
           color="grey lighten-0"
-          width="500"
+          width="600"
           height="550"
         >
           <v-toolbar dark color="black">
@@ -31,7 +31,7 @@
                           ><div class="logo">
                             <a href="RedB" target="_blank_"
                               ><img
-                                width="150"
+                                width="120"
                                 src="https://i.ibb.co/LdPZt21/Picture2.png"
                                 alt=""
                             /></a>
