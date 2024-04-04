@@ -60,6 +60,8 @@
                       </router-link>
                     </v-card>
                   </div>
+<h3>Username- admin</h3>
+<h3>Password- admin</h3>
                 </v-col>
                 <v-col cols="12" sm="8">
                   <v-carousel
