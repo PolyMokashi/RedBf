@@ -57,6 +57,8 @@
                       </v-btn>
                     </router-link>
                   </v-card>
+<h3>Username- admin</h3>
+<h3>Password- admin</h3>
                 </v-col>
                 <v-col cols="12" sm="8">
                   <v-carousel
@@ -77,8 +79,6 @@
               </v-row>
             </v-col>
           </v-row>
-<h3>Username- admin</h3>
-<h3>Password- admin</h3>
         </v-card>
       </v-layout>
     </v-container>
