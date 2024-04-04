@@ -77,10 +77,10 @@
               </v-row>
             </v-col>
           </v-row>
-        </v-card>
-      </v-layout>
 <h3>Username- admin</h3>
 <h3>Password- admin</h3>
+        </v-card>
+      </v-layout>
     </v-container>
   </v-app>
 </template>
