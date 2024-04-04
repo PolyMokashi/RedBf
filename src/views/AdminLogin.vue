@@ -14,8 +14,8 @@
         <v-card
           class="elevation-9"
           color="grey lighten-0"
-          width="650"
-          height="700"
+          width="700"
+          height="650"
         >
           <v-toolbar dark color="black">
             <v-toolbar-title> RedB Admin Login </v-toolbar-title>
