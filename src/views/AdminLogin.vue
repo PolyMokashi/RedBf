@@ -14,7 +14,7 @@
         <v-card
           class="elevation-9"
           color="grey lighten-0"
-          width="700"
+          width="650"
           height="700"
         >
           <v-toolbar dark color="black">
