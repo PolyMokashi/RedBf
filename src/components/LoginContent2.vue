@@ -104,7 +104,7 @@ export default {
 
             // Redirect to the home page or perform other actions
             // ...
-            this.$router.push({ path: "/BloodBank" });
+            this.$router.push({ path: "/bloodbank" });
           } else {
             this.snackbar = true;
             console.error(data.error);
