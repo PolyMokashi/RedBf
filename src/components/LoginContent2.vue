@@ -78,7 +78,7 @@ export default {
     async submit() {
       try {
         this.$refs.observer.validate();
-        this.$router.push({ path: "/Hospital" });
+        this.$router.push({ path: "/bloodbank" });
         if (this.$refs.observer.flags.valid) {
           // Send login request to the server
           const response = await fetch(
