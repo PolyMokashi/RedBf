@@ -53,7 +53,7 @@
                       </router-link>
                     </v-card>
                     <v-card class="d-inline-flex pl-pa-2 ml-9" outlined tile>
-                      <router-link to="/LoginBlood">
+                      <router-link to="/LoginHospital">
                         <v-btn depressed outlined color="grey">
                           <v-icon color="red"> mdi-water-plus </v-icon>
                         </v-btn>
