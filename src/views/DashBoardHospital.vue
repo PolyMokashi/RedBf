@@ -3,8 +3,8 @@
     <template v-if="loader">
       <LoadingScreen :isLoading="loader" />
     </template>
-    <template >
-      <HospitalNavBar :isLoading="!loader"/>
+    <template v-else >
+      <HospitalNavBar />
       <v-main>
       <div class="bg">
         <div class="lamp">
