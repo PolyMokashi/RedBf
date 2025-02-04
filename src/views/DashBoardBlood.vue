@@ -3,7 +3,7 @@
     <template v-if="loader">
       <LoadingScreen :isLoading="loader" />
     </template>
-    <template>
+    <template v-else>
       <BloodNavBar />
       <div class="bg">
         <div class="lamp">
